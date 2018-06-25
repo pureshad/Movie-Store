@@ -7,13 +7,13 @@ namespace Vidly001.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class Add_IsSubscribedToNewsLetter_Column : IMigrationMetadata
+    public sealed partial class GenreIdTypeChange : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Add_IsSubscribedToNewsLetter_Column));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(GenreIdTypeChange));
         
         string IMigrationMetadata.Id
         {
-            get { return "201806211113467_Add_IsSubscribedToNewsLetter_Column"; }
+            get { return "201806250640360_GenreIdTypeChange"; }
         }
         
         string IMigrationMetadata.Source

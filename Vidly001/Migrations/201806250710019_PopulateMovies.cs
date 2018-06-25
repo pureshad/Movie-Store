@@ -3,16 +3,15 @@ namespace Vidly001.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class AddColumn_BirthDate_ToCustomer : DbMigration
+    public partial class PopulateMovies : DbMigration
     {
         public override void Up()
         {
-            AddColumn("dbo.Customers", "BirthDate", c => c.Int());
+            Sql("INSERT INTO Movies (Id, Name, GenreId, ReleaseDate, Uploaded, Count) VALUES (2, 'Harry Potter', 3, '16 November 2001', '16 December 2001', 30)");
         }
-        
+
         public override void Down()
         {
-            DropColumn("dbo.Customers", "BirthDate");
         }
     }
 }

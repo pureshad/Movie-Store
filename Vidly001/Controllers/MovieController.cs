@@ -1,10 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System.Data.Entity;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Web.Mvc;
 using Vidly001.Models;
-using Vidly001.Models.Entity;
-using Vidly001.ViewModels;
 
 namespace Vidly001.Controllers
 {
@@ -25,14 +22,14 @@ namespace Vidly001.Controllers
         // GET: Movie
         public ActionResult Index()
         {
-            var movies = _dbContext.Movies.ToList();
+            var movies = _dbContext.Movies.Include(w => w.Genre).ToList();
 
             return View(movies);
         }
 
         public ActionResult Details(int? id)
         {
-            var movie = _dbContext.Movies.SingleOrDefault(w => w.Id == id);
+            var movie = _dbContext.Movies.Include(w => w.Genre).SingleOrDefault(w => w.Id == id);
 
             if (movie == null)
             {
