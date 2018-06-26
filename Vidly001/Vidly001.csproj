@@ -239,6 +239,14 @@
     <Compile Include="Migrations\201806250724583_PopulateMovies_2.Designer.cs">
       <DependentUpon>201806250724583_PopulateMovies_2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806260657089_ChangeDAteTimeNullbleTrue.cs" />
+    <Compile Include="Migrations\201806260657089_ChangeDAteTimeNullbleTrue.Designer.cs">
+      <DependentUpon>201806260657089_ChangeDAteTimeNullbleTrue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806260713280_ChangeValidationGenreId.cs" />
+    <Compile Include="Migrations\201806260713280_ChangeValidationGenreId.Designer.cs">
+      <DependentUpon>201806260713280_ChangeValidationGenreId.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Entity\Customer.cs" />
@@ -250,7 +258,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\CustomerViewModel.cs" />
+    <Compile Include="ViewModels\MovieFormViewModel.cs" />
     <Compile Include="ViewModels\MovieViewModel.cs" />
+    <Compile Include="ViewModels\CustomerFormViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-lumenV3.css" />
@@ -317,6 +327,8 @@
     <Content Include="Views\Movie\Index.cshtml" />
     <Content Include="Views\Movie\Details.cshtml" />
     <Content Include="Views\Customer\Details.cshtml" />
+    <Content Include="Views\Customer\CustomerForm.cshtml" />
+    <Content Include="Views\Movie\CreateForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -361,6 +373,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806250724583_PopulateMovies_2.resx">
       <DependentUpon>201806250724583_PopulateMovies_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806260657089_ChangeDAteTimeNullbleTrue.resx">
+      <DependentUpon>201806260657089_ChangeDAteTimeNullbleTrue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806260713280_ChangeValidationGenreId.resx">
+      <DependentUpon>201806260713280_ChangeValidationGenreId.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
