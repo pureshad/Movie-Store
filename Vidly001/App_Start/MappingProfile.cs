@@ -10,6 +10,8 @@ namespace Vidly001.App_Start
         {
             Mapper.CreateMap<Customer, CustomerDTO>();
             Mapper.CreateMap<CustomerDTO, Customer>();
+            Mapper.CreateMap<Movie, MovieDTO>();
+            Mapper.CreateMap<MovieDTO, Movie>();
         }
     }
 }
