@@ -43,13 +43,24 @@ namespace Vidly001.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Movie movie)
         {
+            if (!ModelState.IsValid)
+            {
+                var createVM = new MovieFormViewModel(movie)
+                {
+                    Genres = _dbContext.Genres.ToList()
+                };
+
+                return View("CreateForm", createVM);
+            }
+
             var movies = _dbContext.Movies.SingleOrDefault(w => w.Id == movie.Id);
 
             if (movie.Id == 0)
             {
-                movie.Uploaded = DateTime.Now;
+                movie.Uploaded = new DateTime();
                 _dbContext.Movies.Add(movie);
             }
             else
@@ -76,9 +87,8 @@ namespace Vidly001.Controllers
                 return HttpNotFound();
             }
 
-            var movieVM = new MovieFormViewModel
+            var movieVM = new MovieFormViewModel(movies)
             {
-                Movie = movies,
                 Genres = _dbContext.Genres.ToList()
             };
 

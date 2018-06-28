@@ -9,27 +9,37 @@
 
 @using (Html.BeginForm("Save", "Movie"))
 {
+    @Html.ValidationSummary()
     <div class="form-group">
-        @Html.LabelFor(w => w.Movie.Name)
-        @Html.TextBoxFor(w => w.Movie.Name, new { @class = "form-control" })
+        @Html.LabelFor(w => w.Name)
+        @Html.TextBoxFor(w => w.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(w => w.Name)
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(w => w.Movie.ReleaseDate)
-        @Html.TextBoxFor(w => w.Movie.ReleaseDate, "{0:d MMM yyyy}", new { @class = "form-control" })
+        @Html.LabelFor(w => w.ReleaseDate)
+        @Html.TextBoxFor(w => w.ReleaseDate, "{0:d MMM yyyy}", new { @class = "form-control" })
+        @Html.ValidationMessageFor(w => w.ReleaseDate)
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(w => w.Movie.GenreId)
-        @Html.DropDownListFor(w => w.Movie.GenreId, new SelectList(Model.Genres, "Id", "Name"), "Select Genre", new { @class = "form-control" })
+        @Html.LabelFor(w => w.GenreId)
+        @Html.DropDownListFor(w => w.GenreId, new SelectList(Model.Genres, "Id", "Name"), "Select Genre", new { @class = "form-control" })
+        @Html.ValidationMessageFor(w => w.GenreId)
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(w => w.Movie.Count)
-        @Html.TextBoxFor(w => w.Movie.Count, new { @class = "form-control" })
+        @Html.LabelFor(w => w.Count)
+        @Html.TextBoxFor(w => w.Count, new { @class = "form-control" })
+        @Html.ValidationMessageFor(w => w.Count)
     </div>
     <hr />
 
-    @Html.HiddenFor(w => w.Movie.Id)
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(w => w.Id)
     <button class="btn btn-success" type="submit">Save Movie</button>
+}
+
+@section scripts{
+    @Scripts.Render("~/bundles/modernizr")
 }

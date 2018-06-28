@@ -1,8 +1,7 @@
 namespace Vidly001.Migrations
 {
-    using System;
     using System.Data.Entity.Migrations;
-    
+
     public partial class ChangeDAteTimeNullbleTrue : DbMigration
     {
         public override void Up()
