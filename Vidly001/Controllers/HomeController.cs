@@ -2,6 +2,7 @@
 
 namespace Vidly001.Controllers
 {
+    [AllowAnonymous]
     public class HomeController : Controller
     {
         public ActionResult Index()

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Vidly001.Models.Entity.Customer>
+
+@{
+    ViewBag.Title = "CustomersMenu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Customer Menu</h2>
+
+<div class="container">
+    <div class="form-group row">
+        <table id="customers" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Customer Name</th>
+                    <th>Membership Type</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+
+            var table = $("#customers").DataTable({
+
+                ajax: {
+                    url: "/api/customers",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "name",
+                    },
+                    {
+                        data: "membershipType.subscriptionTypeName"
+                    },
+                ]
+            });
+        });
+    </script>
+}

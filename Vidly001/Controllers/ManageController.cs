@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
-using Vidly001.Models;
+using Vidly001.Models.ViewModelsManagment;
 
 namespace Vidly001.Controllers
 {
