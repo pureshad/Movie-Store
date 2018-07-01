@@ -16,5 +16,7 @@ namespace Vidly001.DTOs
 
         [Required, Range(1, 20)]
         public byte Count { get; set; }
+
+        public GenreDTO Genre { get; set; }
     }
 }
