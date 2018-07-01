@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using Vidly001.Models;
+using Vidly001.Models.Entity;
 
 namespace Vidly001.DTOs
 {
@@ -17,5 +18,7 @@ namespace Vidly001.DTOs
 
         //[Min18YearsIsAMember]
         public byte MembershipTypeId { get; set; }
+
+        public MembershipTypeDTO MembershipType { get; set; }
     }
 }
