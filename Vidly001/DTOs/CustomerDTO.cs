@@ -1,7 +1,5 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using Vidly001.Models;
-using Vidly001.Models.Entity;
 
 namespace Vidly001.DTOs
 {

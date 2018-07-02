@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNet.Identity;
-using Microsoft.Owin.Security;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
 
 namespace Vidly001.Models.ViewModelsManagment
 {

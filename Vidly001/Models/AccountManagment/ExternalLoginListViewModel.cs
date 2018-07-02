@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-
-namespace Vidly001.Models.AccountManagment
+﻿namespace Vidly001.Models.AccountManagment
 {
     public class ExternalLoginListViewModel
     {
