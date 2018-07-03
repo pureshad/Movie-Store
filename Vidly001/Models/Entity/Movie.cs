@@ -21,8 +21,11 @@ namespace Vidly001.Models.Entity
         [Display(Name = "Upload Date")]
         public DateTime? Uploaded { get; set; }
 
-        [Required, Range(1, 20)]
+        [Required, Range(1, 250)]
         [Display(Name = "Number in Stock")]
         public byte Count { get; set; }
+
+        [Display(Name = "Available In Stock")]
+        public byte NumberAvailable { get; set; }
     }
 }
