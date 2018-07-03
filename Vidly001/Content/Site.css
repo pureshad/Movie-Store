@@ -29,10 +29,11 @@ textarea {
     padding: 30px 10px 10px 10px;
 }
 
-.field-validation-error {
+.field-validation-error,
+label.error {
     color: red;
 }
 
-.input-validation-error {
+.input-validation-error, input.error {
     border: 2px solid red;
 }

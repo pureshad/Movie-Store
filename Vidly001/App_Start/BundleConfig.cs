@@ -14,7 +14,8 @@ namespace Vidly001
                         "~/Scripts/respond.js",
                         "~/scripts/datatables/jquery.datatables.js",
                         "~/scripts/datatables/datatables.bootstrap.js",
-                        "~/scripts/typeahead.bundle.js"
+                        "~/scripts/typeahead.bundle.js",
+                        "~/scripts/toastr.js"
                         ));
 
 
@@ -30,6 +31,7 @@ namespace Vidly001
                       "~/Content/bootstrap-lumenV3.css",
                       "~/Content/datatables/css/dataTables.bootstrap4.css",
                       "~/Content/typeahead.css",
+                      "~/Content/toastr.css",
                       "~/Content/site.css"
                       ));
         }
