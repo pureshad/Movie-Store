@@ -33,7 +33,7 @@ namespace Vidly001.Controllers
             return View("ReadOnlyList");
         }
 
-        [Authorize(Roles = RoleName.CanManageMovies)]
+        [Authorize]
         public ActionResult Create()
         {
             var genres = _dbContext.Genres.ToList();
